@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 const agentRoutes = require("./routes/agentRoutes");
+const historyRoutes = require("./routes/historyRoutes");
 const marketingRoutes = require("./routes/marketingRoutes");
 const pricingRoutes = require("./routes/pricingRoutes");
 const productRoutes = require("./routes/productRoutes");
@@ -30,6 +31,7 @@ app.get("/api/health", (req, res) => {
 });
 
 app.use("/api/agents", agentRoutes);
+app.use("/api/history", historyRoutes);
 app.use("/api/marketing", marketingRoutes);
 app.use("/api/pricing", pricingRoutes);
 app.use("/api/product", productRoutes);
