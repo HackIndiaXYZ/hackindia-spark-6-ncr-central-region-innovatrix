@@ -7,7 +7,7 @@ import SupportAgent from "./pages/SupportAgent";
 import ReviewAgent from "./pages/ReviewAgent";
 import MarketingAgent from "./pages/MarketingAgent";
 import PricingAgent from "./pages/PricingAgent";
-import TitleOptimizer from "./pages/TitleOptimizer";
+import TitleOptimizerAgent from "./pages/TitleOptimizerAgent";
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
         <Route path="/review" element={<ReviewAgent />} />
         <Route path="/marketing" element={<MarketingAgent />} />
         <Route path="/pricing" element={<PricingAgent />} />
-        <Route path="/title" element={<TitleOptimizer />} />
+        <Route path="/title" element={<TitleOptimizerAgent />} />
       </Routes>
     </BrowserRouter>
   );

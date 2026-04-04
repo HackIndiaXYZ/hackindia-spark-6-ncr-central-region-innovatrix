@@ -1,17 +1,50 @@
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background: linear-gradient(135deg, #0f172a, #1e293b);
   color: white;
 }
 
 .layout {
   display: flex;
+  min-height: 100vh;
 }
 
 .content {
   flex: 1;
   padding: 30px;
+}
+
+.page-subtitle {
+  color: #cbd5e1;
+  margin-bottom: 24px;
+  max-width: 760px;
+  line-height: 1.6;
+}
+
+.agent-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.agent-card {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 24px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.agent-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.agent-card p {
+  color: #cbd5e1;
+  line-height: 1.5;
 }
 
 button {
@@ -25,13 +58,58 @@ button {
 }
 
 button:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
+  box-sizing: border-box;
   padding: 10px;
   margin-top: 10px;
   border-radius: 8px;
   border: none;
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.sidebar {
+  width: 220px;
+  min-height: 100vh;
+  background: #020617;
+  padding: 20px;
+  box-sizing: border-box;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sidebar-link {
+  cursor: pointer;
+  color: #cbd5e1;
+}
+
+.sidebar-link:hover {
+  color: white;
+}
+
+.result-card {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 16px;
+  white-space: pre-wrap;
+  line-height: 1.6;
+}
+
+.history-section {
+  margin-top: 36px;
+}
+
+.empty-message,
+.loader-text {
+  color: #cbd5e1;
+}
+
+.error-message {
+  color: #fca5a5;
+  margin-top: 12px;
 }

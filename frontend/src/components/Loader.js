@@ -1,7 +1,7 @@
 import React from "react";
 
 const Loader = () => {
-  return <p>🤖 AI is thinking...</p>;
+  return <p className="loader-text">AI is thinking...</p>;
 };
 
 export default Loader;
