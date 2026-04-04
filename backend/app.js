@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const { notFound, errorHandler } = require("./middleware/errorMiddleware");
+const agentRoutes = require("./routes/agentRoutes");
 
 const app = express();
 
@@ -21,6 +22,8 @@ app.get("/api/health", (req, res) => {
     message: "Server is healthy",
   });
 });
+
+app.use("/api/agents", agentRoutes);
 
 app.use(notFound);
 app.use(errorHandler);
