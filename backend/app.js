@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 
 const app = express();
 
@@ -20,5 +21,8 @@ app.get("/api/health", (req, res) => {
     message: "Server is healthy",
   });
 });
+
+app.use(notFound);
+app.use(errorHandler);
 
 module.exports = app;
