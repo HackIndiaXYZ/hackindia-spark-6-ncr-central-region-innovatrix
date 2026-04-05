@@ -15,6 +15,7 @@ import AppShell from "../components/AppShell";
 import AgentCard from "../components/Agentcard";
 import Button from "../components/Button";
 import Loader from "../components/Loader";
+import StatsCard from "../components/StatsCard";
 import { fetchAgents, fetchHistory } from "../services/api";
 
 const routeMap = {
@@ -109,22 +110,15 @@ const Home = () => {
       }
     >
       <section className="stats-grid">
-        {stats.map((item) => {
-          const Icon = item.icon;
-
-          return (
-            <div key={item.label} className="stat-card">
-              <div className="stat-icon">
-                <Icon size={20} />
-              </div>
-              <div>
-                <p>{item.label}</p>
-                <h3>{item.value}</h3>
-                <span>{item.detail}</span>
-              </div>
-            </div>
-          );
-        })}
+        {stats.map((item) => (
+          <StatsCard
+            key={item.label}
+            label={item.label}
+            value={item.value}
+            detail={item.detail}
+            icon={item.icon}
+          />
+        ))}
       </section>
 
       <section className="dashboard-grid">

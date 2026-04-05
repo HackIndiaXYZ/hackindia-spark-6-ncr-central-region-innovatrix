@@ -32,14 +32,16 @@ const AppShell = ({ title, subtitle, actions, children }) => {
 
         {actions && <div className="page-actions">{actions}</div>}
 
-        <motion.main
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.35, ease: "easeOut" }}
-          className="page-body"
-        >
-          {children}
-        </motion.main>
+        <div className="content-container">
+          <motion.main
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.35, ease: "easeOut" }}
+            className="page-body"
+          >
+            {children}
+          </motion.main>
+        </div>
       </div>
     </div>
   );

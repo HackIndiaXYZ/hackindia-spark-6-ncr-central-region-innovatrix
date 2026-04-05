@@ -11,8 +11,8 @@ const Button = ({
   return (
     <motion.button
       type="button"
-      whileHover={{ y: -2, scale: 1.01 }}
-      whileTap={{ scale: 0.98 }}
+      whileHover={{ y: -2, scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
       className={`button ${variant === "secondary" ? "button-secondary" : ""} ${className}`.trim()}
       {...props}
     >
