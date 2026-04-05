@@ -46,7 +46,7 @@ const Home = () => {
       <Sidebar />
 
       <div className="content">
-        <h1>AI Dashboard</h1>
+        <h1>AI MarketPlace for E Commerce Sellers</h1>
         <p className="page-subtitle">
           Discover seller-focused AI agents and run real backend-powered generation workflows from one place.
         </p>
